@@ -27,12 +27,27 @@ My initial idea was to generate copy based on “generations” and cultural lan
 
 ## Personas (2×2 framework)
 
+### 1) Life-stage cohorts (age-based context)
+
+Customers are first grouped into broad life-stage cohorts based on birth year. These cohorts provide contextual information but are not used alone to drive creative decisions.
+
+- **Young Professionals**: born 1988 and later  
+- **Mid-Career**: born 1976–1987  
+- **Established**: born 1965–1975  
+- **Legacy**: born before 1965  
+
+EDA showed that aggregate response rates across these cohorts were nearly identical, indicating that age alone does not explain how customers respond to marketing.
+
+### 2) Behavioral personas (defined within each cohort)
+
+Within each life-stage cohort, customers are further segmented using **behavioral signals**.
+
 Personas are defined **within each cohort** using cohort-specific medians:
 
-- **Champions**: High spend, high engagement  
-- **Premium-but-Quiet**: High spend, low engagement  
-- **Deal-Responsive**: Low spend, high engagement  
-- **Hard-to-Convert**: Low spend, low engagement
+- **Champions**: high spend, high engagement  
+- **Premium-but-Quiet**: high spend, low engagement  
+- **Deal-Responsive**: low spend, high engagement  
+- **Hard-to-Convert**: low spend, low engagement  
 
 Signals used:
 - Spend proxy: `total_spend` (sum of product category spend)
