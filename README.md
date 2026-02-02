@@ -21,7 +21,7 @@ My initial idea was to generate copy based on “generations” and cultural lan
   Notebook used to explore the dataset and justify segmentation choices (plots + talking points for the demo).
 
 - `marketing_campaign.csv`  
-  Dataset file (semicolon-delimited).
+  Dataset file.
 
 ---
 
