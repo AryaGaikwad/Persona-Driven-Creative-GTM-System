@@ -2,7 +2,7 @@
 
 A lightweight project that connects **customer behavior** to **marketing creative generation**.
 
-Instead of writing one generic prompt, this project:
+Instead of writing one generic advertisement, this project:
 1) segments customers into **life-stage cohorts** and **behavioral personas** (spend × engagement), then  
 2) turns a selected segment into a structured **creative brief**, and  
 3) uses an LLM (Gemini) to generate persona-specific marketing copy variants.
