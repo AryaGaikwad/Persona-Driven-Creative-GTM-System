@@ -66,5 +66,6 @@ python creative_gtm.py \
   --cohort "Mid-Career" \
   --persona "Champions" \
   --channel email \
-  --style playful
+  --style playful\
+  --product "Any product you want to advertise"
 
