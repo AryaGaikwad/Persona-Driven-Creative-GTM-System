@@ -16,7 +16,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # ----------------------------
-# Cohort assignment (life-stage, not fake generations)
+# Cohort assignment 
 # ----------------------------
 def assign_cohort(year_birth):
     if pd.isna(year_birth):
@@ -74,7 +74,7 @@ def load_and_prepare(csv_path: str) -> pd.DataFrame:
     df["past_accept_count"] = df[accepted_cols].sum(axis=1).astype(int)
     df["ever_accepted"] = (df["past_accept_count"] > 0).astype(int)
 
-    # GTM outcome references (NOT used to judge AI yet)
+    # GTM outcome references 
     df["responded_last_campaign"] = df["Response"].astype(int)
     df["responded_any_campaign"] = (
         (df["ever_accepted"] == 1) | (df["Response"] == 1)
@@ -179,8 +179,7 @@ def build_personas(df: pd.DataFrame) -> pd.DataFrame:
                 ) if r["responded_any_campaign"] in [0, 1] else "Hard-to-Convert",
                 axis=1
             )
-            # But we need high_engage based on responded_any_campaign:
-            # We'll implement directly to avoid confusion:
+
             def _persona_proxy(r):
                 high_spend = r["total_spend"] >= spend_med
                 high_engage = r["responded_any_campaign"] == 1
@@ -392,11 +391,6 @@ def extract_json(text: str) -> Any:
         raise ValueError("Could not find JSON object in model output.")
 
     return json.loads(text[start:end+1])
-
-
-
-
-
 
 
 
